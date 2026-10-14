@@ -4,6 +4,7 @@ import "./globals.css";
 import { CartProvider } from "@/components/cart-provider";
 import { SiteHeader } from "@/components/site-header";
 import { LeafIcon, MateIcon, ThermosIcon } from "@/components/icons";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -16,9 +17,33 @@ const heading = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "La Pausa Matera | Mates, termos y bombillas",
-  description: "Mates, termos y bombillas para hacer de cada mate una pausa. Pedidos por WhatsApp.",
-  icons: { icon: "/favicon.png" },
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "La Pausa Matera | Mates artesanales, termos y bombillas",
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: [
+    "mates", "mate de calabaza", "mate de algarrobo", "mate camionero", "mate imperial", "mate torpedo",
+    "termos", "bombillas", "bombillón", "yerba mate", "mates artesanales", "tienda de mates", "Argentina",
+  ],
+  alternates: { canonical: "/" },
+  icons: { icon: "/favicon.png", apple: "/favicon.png" },
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "/",
+    siteName: SITE_NAME,
+    title: "La Pausa Matera | Mates artesanales, termos y bombillas",
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "La Pausa Matera | Mates artesanales, termos y bombillas",
+    description: SITE_DESCRIPTION,
+  },
+  robots: { index: true, follow: true },
 };
 
 // Decorative mate motifs scattered over the gradient background.

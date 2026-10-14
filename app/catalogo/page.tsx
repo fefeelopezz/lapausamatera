@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Suspense } from "react";
 import { Catalog } from "./catalog";
 
-export const metadata: Metadata = { title: "Catálogo | La Pausa Matera" };
+export const metadata: Metadata = pageMetadata(
+  "Catálogo",
+  "Catálogo de mates artesanales (camioneros, imperiales y torpedos de calabaza y algarrobo), termos y bombillas. Filtrá por categoría y sumá al carrito.",
+  "/catalogo"
+);
 
 async function CatalogFromParams({ searchParams }: Pick<PageProps<"/catalogo">, "searchParams">) {
   const { cat } = await searchParams;

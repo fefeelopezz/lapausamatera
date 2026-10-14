@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { CartView } from "./cart-view";
 
-export const metadata: Metadata = { title: "Pedidos | La Pausa Matera" };
+export const metadata: Metadata = pageMetadata(
+  "Pedidos",
+  "Cómo hacer tu pedido en La Pausa Matera: armá el carrito, envialo por WhatsApp y confirmá con una seña del 50%. El resto se abona al recibir.",
+  "/pedidos"
+);
 
 const STEPS = [
   { title: "Elegí tus productos", text: "Recorré el catálogo y sumá al carrito los mates, termos y bombillas que quieras." },

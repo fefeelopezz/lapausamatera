@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Card, CardContent } from "@/components/ui/card";
 import { InstagramIcon, LeafIcon, MateIcon, ThermosIcon, WhatsappIcon } from "@/components/icons";
 import { whatsappUrl } from "@/lib/whatsapp";
 
-export const metadata: Metadata = { title: "Contacto | La Pausa Matera" };
+export const metadata: Metadata = pageMetadata(
+  "Contacto",
+  "Contactá a La Pausa Matera por WhatsApp o Instagram. Además, guía para curar tu mate de calabaza o de algarrobo y preguntas frecuentes.",
+  "/contacto"
+);
 
 // shortcut: Instagram handle is a placeholder, replace with the real account.
 const SOCIALS = [
