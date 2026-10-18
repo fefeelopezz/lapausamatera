@@ -10,7 +10,6 @@ export const metadata: Metadata = pageMetadata(
   "/contacto"
 );
 
-// shortcut: Instagram handle is a placeholder, replace with the real account.
 const SOCIALS = [
   { label: "WhatsApp", handle: "+54 9 11 5106-3376", href: whatsappUrl("¡Hola! Tengo una consulta 🧉"), Icon: WhatsappIcon },
   { label: "Instagram", handle: "@lapausamatera", href: "https://instagram.com/lapausamatera.arg", Icon: InstagramIcon },

@@ -1,4 +1,3 @@
-// SVGs from the All SVG Icons MCP (tabler, fluent-emoji-high-contrast, iconoven).
 import type { SVGProps } from "react"
 
 type P = SVGProps<SVGSVGElement>

@@ -14,7 +14,6 @@ const INK = "#1c1c1a";
 
 const pub = (p: string) => join(process.cwd(), "public", p);
 
-// ImageResponse can't decode .webp, so photos are converted to PNG data URIs.
 async function photo(p: string) {
   const png = await sharp(pub(p)).resize(300, 380, { fit: "cover" }).png().toBuffer();
   return `data:image/png;base64,${png.toString("base64")}`;

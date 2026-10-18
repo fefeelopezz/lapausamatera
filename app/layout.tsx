@@ -46,7 +46,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-// Decorative mate motifs scattered over the gradient background.
 const DECOR = [
   { Icon: MateIcon, className: "top-24 left-[6%] size-20 -rotate-12" },
   { Icon: LeafIcon, className: "top-[38%] right-[5%] size-16 rotate-45" },

@@ -5,7 +5,7 @@ export type Product = {
   name: string
   category: Category
   image: string
-  price: number // ARS
+  price: number
   description: string
 }
 
@@ -15,7 +15,6 @@ export const CATEGORIES: { value: Category; label: string }[] = [
   { value: "bombillas", label: "Bombillas" },
 ]
 
-// Draft descriptions: review details (materials, sizes) before publishing.
 export const PRODUCTS: Product[] = [
   { id: "camionero", name: "Camionero", category: "mates", image: "/mates/camioneroClasico.webp", price: 24900,
     description: "Base de cuero, con interior de calabaza" },
